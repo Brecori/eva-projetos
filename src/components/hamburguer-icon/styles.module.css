@@ -1,0 +1,78 @@
+@keyframes menu-top-open {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1.2rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(1.2rem) rotate(45deg);
+  }
+}
+
+@keyframes menu-top-close {
+  0% {
+    transform: translateY(1.2rem) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(1.2rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes menu-bottom-open {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1.2rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-1.2rem) rotate(-45deg);
+  }
+}
+
+@keyframes menu-bottom-close {
+  0% {
+    transform: translateY(-1.2rem) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(-1.2rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.line {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.5, 0.2, 0.2, 1.01);
+  animation-fill-mode: forwards;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.topOpen {
+  animation-name: menu-top-open;
+}
+
+.topClose {
+  animation-name: menu-top-close;
+}
+
+.bottomOpen {
+  animation-name: menu-bottom-open;
+}
+
+.bottomClose {
+  animation-name: menu-bottom-close;
+}
