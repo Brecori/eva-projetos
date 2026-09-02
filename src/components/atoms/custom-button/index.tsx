@@ -12,17 +12,19 @@ export const CustomButton = ({
     <a
       href={href}
       className={clsx(
-        "relative inline-block overflow-hidden whitespace-nowrap font-montserrat text-[2rem] font-semibold uppercase",
+        "relative inline-block w-max overflow-hidden whitespace-nowrap font-montserrat text-[2rem] font-semibold uppercase",
         "group",
         className,
       )}
       target={isExternal ? "_blank" : "_self"}
       rel={isExternal ? "noopener noreferrer" : undefined}
     >
-      <div className={clsx(
-        "relative flex w-max translate-x-0 items-center transition-transform duration-400 ease-in-out",
-        "group-hover:translate-x-[4.6rem]",
-      )}>
+      <div
+        className={clsx(
+          "relative flex w-max translate-x-0 items-center transition-transform duration-400 ease-in-out",
+          "group-hover:translate-x-[4.6rem]",
+        )}
+      >
         <div
           className={clsx("absolute top-0 right-full flex items-center pr-8")}
           aria-hidden="true"
