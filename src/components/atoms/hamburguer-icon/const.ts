@@ -3,4 +3,4 @@ export const C = {
     open: "Abrir menu",
     close: "Fechar menu",
   }
-}
+};

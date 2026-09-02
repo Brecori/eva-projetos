@@ -1,6 +1,6 @@
-import { Navbar } from "@/templates/navbar";
+import { Header } from "@/components/organisms/header";
+import { Navbar } from "@/components/organisms/navbar";
 import { ReactNode } from "react";
-import { Header } from "./header";
 
 export const HomeTemplate = (): ReactNode => {
   return (

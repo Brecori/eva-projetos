@@ -20,23 +20,12 @@ export const HeaderButton = ({
       rel={isExternal ? "noopener noreferrer" : undefined}
     >
       <div className="relative flex w-max translate-x-0 items-center transition-transform duration-400 ease-in-out group-hover:translate-x-28">
-        <div
-          className="absolute top-0 right-full pr-8 flex items-center"
-          aria-hidden="true"
-        >
-          <MoveRight
-            strokeWidth={1}
-            size={32}
-            className="opacity-0 text-bronze transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-          />
+        <div className="absolute top-0 right-full flex items-center pr-8" aria-hidden="true">
+          <MoveRight strokeWidth={1} size={32} className="text-bronze opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100" />
         </div>
-        <div className="flex gap-8 items-center text-dark-blue">
+        <div className="flex items-center gap-8 text-dark-blue">
           {children}
-          <MoveRight
-            strokeWidth={1}
-            size={32}
-            className="text-bronze opacity-100 transition-opacity duration-400 ease-in-out group-hover:opacity-0"
-          />
+          <MoveRight strokeWidth={1} size={32} className="text-bronze opacity-100 transition-opacity duration-400 ease-in-out group-hover:opacity-0" />
         </div>
       </div>
     </a>

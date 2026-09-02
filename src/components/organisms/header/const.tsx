@@ -8,15 +8,7 @@ export const C = {
     </>
   ),
   buttons: [
-    {
-      title: "Ver Projetos",
-      href: "#projects",
-      key: "projects",
-    },
-    {
-      title: "Fale Conosco",
-      href: "#contact",
-      key: "contact",
-    }
-  ]
+    { title: "Ver Projetos", href: "#projects", key: "projects" },
+    { title: "Fale Conosco", href: "#contact", key: "contact" },
+  ],
 };

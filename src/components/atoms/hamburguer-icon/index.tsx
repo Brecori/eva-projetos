@@ -4,7 +4,7 @@ import { ReactNode, useState } from "react";
 import clsx from "clsx";
 import { HamburguerIconProps } from "./props";
 import S from "./styles.module.css";
-import { C } from "./constants";
+import { C } from "./const";
 
 export const HamburguerIcon = ({
   isOpen,
