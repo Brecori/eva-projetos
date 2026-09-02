@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
 
-export type HeaderButtonProps = ComponentPropsWithoutRef<"a"> & {
+export type CustomButtonProps = ComponentPropsWithoutRef<"a"> & {
   isExternal?: boolean;
 };

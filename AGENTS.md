@@ -39,7 +39,7 @@ src/
 ├── app/                  # Entrypoints do App Router, layout e estilos globais
 ├── components/           # Componentes reutilizáveis da interface
 │   ├── hamburguer-icon/
-│   ├── header-button/
+│   ├── custom-button/
 │   └── menu/
 └── templates/            # Composição das páginas e seções da landing page
     ├── header/
@@ -49,6 +49,34 @@ public/                   # Imagens e demais assets estáticos
 ```
 
 O alias `@/*` aponta para `src/*`. Use imports pelo alias em vez de caminhos relativos longos. A página inicial é `src/app/page.tsx`; o layout global e os metadados ficam em `src/app/layout.tsx`; tokens e regras globais ficam em `src/app/globals.css`.
+
+### Fluxo atual da página
+
+```text
+src/app/page.tsx
+└── HomeTemplate (src/templates/index.tsx)
+    ├── Navbar (organism)
+    │   ├── HamburguerIcon (atom)
+    │   └── Menu (organism)
+    └── Header (organism)
+        └── CustomButton (atom)
+```
+
+`Navbar` é um Client Component porque controla o menu e reage ao scroll. `HamburguerIcon` também é client-side por controlar o estado visual da animação do ícone. `HomeTemplate` e `Header` permanecem Server Components, pois apenas compõem a página e não dependem de APIs do navegador.
+
+## Responsividade
+
+As larguras de referência do projeto são:
+
+- `1920px`: desktop principal e escala base do layout.
+- `1024px`: breakpoint `desktop1024`, usado para desktop menor e iPads.
+- `600px`: breakpoint `mobile`, usado como referência para telas mobile.
+
+O `html` usa uma escala tipográfica fluida em `globals.css`: a base é calculada para 1920px, reduzida para 1024px até 600px e ajustada para 599px ou menos. Ao implementar uma seção, valide no mínimo essas três larguras e evite criar breakpoints paralelos sem necessidade.
+
+No Tailwind v4, os tokens `mobile` e `desktop1024` são definidos como breakpoints de largura mínima (`min-width`) em `globals.css`. Já as media queries do tamanho da fonte usam `max-width`. Considere essa diferença ao escolher entre classes responsivas e regras CSS globais; não presuma que `mobile:` representa somente larguras abaixo de 600px.
+
+Use primeiro o layout base para 1920px e aplique ajustes específicos com `mobile:` e `desktop1024:` somente quando a composição realmente mudar. Preserve proporções, espaçamentos, tipografia e posicionamento dos assets do Figma em desktop, iPad e mobile.
 
 ## Arquitetura de componentes
 
