@@ -1,3 +1,4 @@
+import { CustomBr } from "@/components/atoms/custom-br";
 import clsx from "clsx";
 import Image from "next/image";
 import { ReactNode } from "react";
@@ -28,10 +29,11 @@ export const About = (): ReactNode => {
             "before:absolute before:top-1/2 before:left-0 before:h-200 before:w-[0.3rem] before:translate-y-[-50%] before:bg-bronze before:content-['']",
           )}
         >
-          A EVA projetos nasceu <br />
+          A EVA projetos nasceu <CustomBr breakpoint="mobile" />
           com o objetivo de tornar
-          <br />a engenharia civil e a <br />
-          arquitetura mais acessível <br />
+          <CustomBr breakpoint="mobile" /> a engenharia civil e a{" "}
+          <CustomBr breakpoint="mobile" />
+          arquitetura mais acessível <CustomBr breakpoint="mobile" />
           para cada cliente.
         </h2>
 
