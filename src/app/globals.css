@@ -14,13 +14,22 @@
   --color-cream: var(--color-muslin);
   --color-dark-blue: var(--color-maastrich-blue);
 
+  /* Backgrounds */
+  --background-image-cream-gradient: linear-gradient(
+    180deg,
+    var(--color-white) 0%,
+    var(--color-muslin) 20%,
+    var(--color-muslin) 80%,
+    var(--color-white) 100%
+  );
+
   /* Fonts  */
   --font-cormorant: var(--font-cormorant);
   --font-montserrat: var(--font-montserrat);
 
   /* Breakpoints */
-  --breakpoint-mobile: 600px;
-  --breakpoint-desktop1024: 1024px;
+  --breakpoint-mobile: 601px;
+  --breakpoint-desktop1024: 1025px;
 }
 
 li {

@@ -7,7 +7,8 @@ export const Header = (): ReactNode => {
   return (
     <header
       className={clsx(
-        "relative flex min-h-screen flex-col justify-center gap-[2.4rem] px-[3.2rem] desktop1024:px-60",
+        "relative flex min-h-screen flex-col justify-center gap-[2.4rem] px-[3.2rem]",
+        "desktop1024:px-60",
         "before:absolute before:right-0 before:z-[-1] before:h-[94.1rem] before:w-[126.4rem] before:bg-[url('/header/grafismo.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-100 before:content-['']",
       )}
     >
