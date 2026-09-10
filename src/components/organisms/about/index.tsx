@@ -10,8 +10,8 @@ export const About = (): ReactNode => {
       aria-labelledby="about-title"
       className={clsx(
         "flex items-start justify-between bg-cream-gradient px-60 py-48 text-dark-blue",
-        "max-desktop1024:px-24",
-        "max-mobile:px-[3.2rem]",
+        "max-desktop1024:px-24 max-desktop1024:py-32",
+        "max-mobile:px-[3.2rem] max-mobile:py-24",
       )}
     >
       <div
