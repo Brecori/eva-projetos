@@ -23,7 +23,7 @@ export const Navbar = (): ReactNode => {
         "fixed left-0 right-0 top-0 z-10 flex items-center justify-between transition-background transition-height duration-300 ease-in-out",
         hasScrolled && !isMenuOpen ? "h-32 bg-white" : "h-40 bg-transparent",
         "px-60",
-        "max-desktop1024:px-28",
+        "max-desktop1024:px-24",
         "max-mobile:px-[3.2rem]",
         hasScrolled || isMenuOpen
           ? "border-b border-cream"
