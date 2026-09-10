@@ -25,9 +25,7 @@ export const Navbar = (): ReactNode => {
         "px-60",
         "max-desktop1024:px-24",
         "max-mobile:px-[3.2rem]",
-        hasScrolled || isMenuOpen
-          ? "border-b border-cream"
-          : "border-b border-transparent",
+     
       )}
     >
       <p

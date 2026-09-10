@@ -2,6 +2,7 @@ import { Header } from "@/components/organisms/header";
 import { About } from "@/components/organisms/about";
 import { Navbar } from "@/components/organisms/navbar";
 import { Services } from "@/components/organisms/services";
+import { OnlineService } from "@/components/organisms/online-service";
 import { ReactNode } from "react";
 
 export const HomeTemplate = (): ReactNode => {
@@ -11,6 +12,7 @@ export const HomeTemplate = (): ReactNode => {
       <Header />
       <About />
       <Services />
+      <OnlineService />
     </main>
   );
 };
