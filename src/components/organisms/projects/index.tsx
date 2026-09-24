@@ -2,6 +2,8 @@
 
 import clsx from "clsx";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ProjectNavigationButton } from "@/components/atoms/project-navigation-button";
 import { PROJECTS } from "@/constants/projects";
 import { C } from "./const";
 import {
@@ -20,6 +22,8 @@ export const Projects = () => {
     projectList,
     selectProject,
     setProjectButton,
+    showNextProject,
+    showPreviousProject,
     updateFadeEdges,
   } = useProjectsGallery();
 
@@ -63,7 +67,7 @@ export const Projects = () => {
           "max-mobile:mt-16 max-mobile:grid-cols-1 max-mobile:gap-12",
         )}
       >
-        <div className="relative aspect-video overflow-hidden rounded-2xl">
+        <div className="relative aspect-video overflow-hidden rounded-xl">
           <Image
             src={activeProject.image}
             alt={activeProject.imageAlt}
@@ -119,14 +123,36 @@ export const Projects = () => {
         </div>
       </div>
 
-      <div className={clsx("mt-20", "max-mobile:mt-16")}>
-        <h3 className="font-manrope text-[2rem] font-semibold tracking-[0.2rem] text-bronze uppercase">
-          {C.otherProjectsLabel}
-        </h3>
-        <span
-          aria-hidden="true"
-          className="mt-6 block h-[0.2rem] w-28 bg-bronze"
-        />
+      <div
+        className={clsx(
+          "mt-20 flex items-start justify-between",
+          "max-mobile:mt-16",
+        )}
+      >
+        <div>
+          <h3 className="font-manrope text-[2rem] font-semibold tracking-[0.2rem] text-bronze uppercase">
+            {C.otherProjectsLabel}
+          </h3>
+          <span
+            aria-hidden="true"
+            className="mt-6 block h-[0.2rem] w-28 bg-bronze"
+          />
+        </div>
+
+        <div className={clsx("flex items-center gap-4")}>
+          <ProjectNavigationButton
+            aria-label={C.previousProjectAriaLabel}
+            onClick={showPreviousProject}
+          >
+            <ChevronLeft aria-hidden="true" size={40} strokeWidth={1.5} />
+          </ProjectNavigationButton>
+          <ProjectNavigationButton
+            aria-label={C.nextProjectAriaLabel}
+            onClick={showNextProject}
+          >
+            <ChevronRight aria-hidden="true" size={40} strokeWidth={1.5} />
+          </ProjectNavigationButton>
+        </div>
       </div>
 
       <ol

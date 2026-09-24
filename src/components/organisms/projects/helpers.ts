@@ -74,6 +74,10 @@ export const useProjectsGallery = () => {
   }, [updateFadeEdges]);
 
   const selectProject = (index: number) => setActiveIndex(index);
+  const showPreviousProject = () =>
+    setActiveIndex((index) => (index - 1 + PROJECTS.length) % PROJECTS.length);
+  const showNextProject = () =>
+    setActiveIndex((index) => (index + 1) % PROJECTS.length);
   const setProjectButton = (index: number, element: HTMLButtonElement | null) => {
     projectButtons.current[index] = element;
   };
@@ -85,6 +89,8 @@ export const useProjectsGallery = () => {
     projectList,
     selectProject,
     setProjectButton,
+    showNextProject,
+    showPreviousProject,
     updateFadeEdges,
   };
 };
