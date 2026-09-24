@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Cormorant, Montserrat } from "next/font/google";
+import { Cormorant, Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant({
   variable: "--font-cormorant",
+  subsets: ["latin"],
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -21,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${cormorant.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${montserrat.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>

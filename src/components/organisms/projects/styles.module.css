@@ -1,0 +1,49 @@
+.projectList {
+  scrollbar-width: none;
+}
+
+.projectList::-webkit-scrollbar {
+  display: none;
+}
+
+.fadeLeft {
+  mask-image: linear-gradient(to right, transparent, #000 8rem);
+}
+
+.fadeRight {
+  mask-image: linear-gradient(to right, #000 calc(100% - 8rem), transparent);
+}
+
+.fadeLeft.fadeRight {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8rem,
+    #000 calc(100% - 8rem),
+    transparent
+  );
+}
+
+.progress {
+  transform-origin: left;
+  animation-name: fill;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress {
+    animation: none;
+    transform: scaleX(1);
+  }
+}

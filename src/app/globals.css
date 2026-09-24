@@ -26,6 +26,7 @@
   /* Fonts  */
   --font-cormorant: var(--font-cormorant);
   --font-montserrat: var(--font-montserrat);
+  --font-manrope: var(--font-manrope);
 
   /* Breakpoints */
   --breakpoint-mobile: 601px;
